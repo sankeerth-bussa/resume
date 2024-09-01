@@ -1,0 +1,319 @@
+/* General Styles */
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif; /* Updated font */
+  line-height: 1.6;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #f7f9fc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Header Section */
+.header {
+  background-color: #0070f3;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.name {
+  font-size: 32px;
+  margin: 0;
+}
+
+.contact {
+  font-size: 16px;
+  margin: 0;
+}
+
+.link-button {
+  padding: 10px 15px;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  text-decoration: none;
+  margin: 5px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.link-button:hover {
+  color: #0070f3;
+  background-color: #ffffff;
+}
+
+.link-button::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ffffff;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.link-button:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.profile-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  object-fit: cover;
+  background-color: #ffffff;
+  z-index: 10;
+}
+
+/* Education Section */
+.section {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  font-size: 24px;
+  color: #333333;
+  border-bottom: 2px solid #0070f3;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.education-details {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.education-icon {
+  width: 30px;
+  height: 30px;
+}
+
+/* Technical Skills Section */
+.skills-section {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.skills-title {
+  font-size: 24px;
+  color: #005bb5;
+  border-bottom: 2px solid #0070f3;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background-color: #f0f2f5;
+  border-radius: 5px;
+  border: 1px solid #e0e0e0;
+  transition: transform 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.skill-icon {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 10px;
+}
+
+.skill-badge {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #0070f3;
+  color: #ffffff;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.skill-list {
+  display: none;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  list-style-type: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  position: absolute;
+  top: 100%; /* Position it below the skill card */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%; /* Adjust width to match card */
+  z-index: 1;
+  font-size: 14px; /* Adjusted font size */
+  color: #333333; /* Adjusted font color */
+}
+
+.skill-card:hover .skill-list {
+  display: block;
+}
+
+.skill-progress {
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  height: 6px;
+  width: 100%;
+  margin-top: 5px;
+  overflow: hidden;
+}
+
+.skill-progress-bar {
+  background-color: #0070f3;
+  height: 6px;
+  border-radius: 5px;
+}
+
+/* Work Experience Section */
+.job {
+  margin-bottom: 20px;
+}
+
+.job-title {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.job-duration {
+  color: #666666;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.text {
+  font-size: 16px;
+  color: #333333;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Work Experience Section */
+.section {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  font-size: 24px;
+  color: #005bb5;
+  border-bottom: 2px solid #0070f3;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.job {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-left: 4px solid #0070f3; /* Adds a colored border to highlight each job */
+  background-color: #f7f9fc; /* Light background for differentiation */
+  border-radius: 5px;
+  position: relative;
+}
+
+.job-title {
+  font-weight: bold;
+  font-size: 18px;
+  color: #333333;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between icon and text */
+}
+
+.job-title::before {
+  content: "🏢"; /* Example icon before the job title */
+  font-size: 18px;
+}
+
+.job-duration {
+  color: #666666;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list-item {
+  font-size: 16px;
+  color: #333333;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.list-item::before {
+  content: "•"; /* Bullet point for each list item */
+  color: #0070f3;
+  font-size: 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+
