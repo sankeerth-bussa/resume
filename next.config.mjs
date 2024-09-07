@@ -2,10 +2,9 @@
 
 const isProd = process.env.NODE_ENV === 'production';
 
-export default (phase) => {
-  return {
-    basePath: isProd ? '/resume' : '',
-    assetPrefix: isProd ? '/resume/' : '',
-    reactStrictMode: true,
-  };
+export default {
+  basePath: isProd ? '/resume' : '',
+  assetPrefix: isProd ? '/resume/' : '',
+  reactStrictMode: true,
+  output: 'export',
 };
