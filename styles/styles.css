@@ -126,11 +126,6 @@ body {
   margin-bottom: 20px;
 }
 
-.job-title {
-  font-weight: bold;
-  font-size: 18px;
-}
-
 .job-duration {
   color: #666666;
   font-size: 14px;
@@ -148,31 +143,6 @@ body {
 }
 
 /* Work Experience Section */
-.section {
-  margin-top: 20px;
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.section-title {
-  font-size: 24px;
-  color: #005bb5;
-  border-bottom: 2px solid #0070f3;
-  padding-bottom: 5px;
-  margin-bottom: 15px;
-  font-weight: bold;
-}
-
-.job {
-  margin-bottom: 20px;
-  padding: 15px;
-  border-left: 4px solid #0070f3; /* Adds a colored border to highlight each job */
-  background-color: #f7f9fc; /* Light background for differentiation */
-  border-radius: 5px;
-  position: relative;
-}
 
 .job-title {
   font-weight: bold;
@@ -181,24 +151,12 @@ body {
   margin: 0;
   display: flex;
   align-items: center;
-  gap: 8px; /* Space between icon and text */
+  gap: 8px;
 }
 
 .job-title::before {
-  content: "🏢"; /* Example icon before the job title */
+  content: "🏢";
   font-size: 18px;
-}
-
-.job-duration {
-  color: #666666;
-  font-size: 14px;
-  margin-bottom: 10px;
-}
-
-.list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
 }
 
 .list-item {
@@ -210,7 +168,7 @@ body {
 }
 
 .list-item::before {
-  content: "•"; /* Bullet point for each list item */
+  content: "•";
   color: #0070f3;
   font-size: 20px;
   position: absolute;
