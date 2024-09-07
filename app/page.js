@@ -3,8 +3,8 @@
 import Image from "next/image";
 
 export const metadata = {
-  title: "Sankeerth's Resume",
-  description: "Professional Resume Of Sankeerth Bussa",
+  title: "Sankeerth: A Cloud Engineer's Chronicles",
+  description: "Professional Journey Of Sankeerth Bussa",
 };
 
 import React from "react";
@@ -38,8 +38,8 @@ export default function Home() {
               </a>
             </div>
           </div>
-          {/* Profile Photo */}
 
+          {/* Profile Photo */}
           <Image
             src="/profile.png"
             alt="Profile Photo of Sankeerth Bussa"
