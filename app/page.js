@@ -79,11 +79,12 @@ export default function Home() {
         {/* Relevant Work Experience Section */}
         <WorkExperience />
 
+        {/* Certifications Section */}
+        <Certifications />
+        
         {/* Academic Projects and International Publications Section */}
         <AcademicProjects />
 
-        {/* Certifications Section */}
-        <Certifications />
       </main>
     </div>
   );
