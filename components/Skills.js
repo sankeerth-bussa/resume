@@ -1,6 +1,7 @@
 "use client"; // This is a client component
 
 import React from "react";
+import Image from "next/image";
 import "../styles/styles.css"; // Ensure you have the right path to your CSS file
 
 export default function Skills() {
@@ -10,10 +11,13 @@ export default function Skills() {
       <div className="skills-grid">
         {/* DevOps Skills */}
         <div className="skill-card">
-          <img
-            src="/devops-icon.png"
+          <Image
+            src={`${process.env.NODE_ENV === "production" ? "/resume" : ""}/devops-icon.png`}
             alt="DevOps Icon"
             className="skill-icon"
+            width={120}
+            height={120}
+            unoptimized
           />
           <span className="skill-badge">DevOps</span>
           <div className="skill-progress">
@@ -30,10 +34,13 @@ export default function Skills() {
 
         {/* Cloud & Security Skills */}
         <div className="skill-card">
-          <img
-            src="/cloud-icon.png"
+          <Image
+            src={`${process.env.NODE_ENV === "production" ? "/resume" : ""}/cloud-icon.png`}
             alt="Cloud & Security Icon"
             className="skill-icon"
+            width={120}
+            height={120}
+            unoptimized
           />
           <span className="skill-badge">Cloud & Security</span>
           <div className="skill-progress">
@@ -49,7 +56,14 @@ export default function Skills() {
 
         {/* Tools Skills */}
         <div className="skill-card">
-          <img src="/tools-icon.png" alt="Tools Icon" className="skill-icon" />
+          <Image
+            src={`${process.env.NODE_ENV === "production" ? "/resume" : ""}/tools-icon.png`}
+            alt="Tools Icon"
+            className="skill-icon"
+            width={120}
+            height={120}
+            unoptimized
+          />
           <span className="skill-badge">Tools</span>
           <div className="skill-progress">
             <div className="skill-progress-bar" style={{ width: "80%" }}></div>
@@ -65,10 +79,13 @@ export default function Skills() {
 
         {/* Programming Languages */}
         <div className="skill-card">
-          <img
-            src="/languages-icon.png"
+          <Image
+            src={`${process.env.NODE_ENV === "production" ? "/resume" : ""}/languages-icon.png`}
             alt="Languages Icon"
             className="skill-icon"
+            width={120}
+            height={120}
+            unoptimized
           />
           <span className="skill-badge">Languages</span>
           <div className="skill-progress">
