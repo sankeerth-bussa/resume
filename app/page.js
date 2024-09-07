@@ -40,7 +40,9 @@ export default function Home() {
           {/* Profile Photo */}
 
           <Image
-            src={`${process.env.NODE_ENV === "production" ? "/resume" : ""}/profile.png`} // Adjust path according to the base path
+            src={`${
+              process.env.NODE_ENV === "production" ? "/resume" : ""
+            }/profile.png`} // Adjust path according to the base path
             alt="Profile Photo of Sankeerth Bussa"
             className="profile-photo"
             width={120} // Specify width of the image
@@ -53,10 +55,13 @@ export default function Home() {
         <section className="section">
           <h2 className="section-title">Education</h2>
           <div className="education-details">
-            <img
+            <Image
               src="/education-icon.png"
               alt="Education Icon"
               className="education-icon"
+              width={120} // Specify width of the image
+              height={120} // Specify height of the image
+              unoptimized // Disable image optimization for static deployment
             />
             <p className="text">
               <strong>
