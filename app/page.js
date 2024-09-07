@@ -40,9 +40,7 @@ export default function Home() {
           {/* Profile Photo */}
 
           <Image
-            src={`${
-              process.env.NODE_ENV === "production" ? "/resume" : ""
-            }/profile.png`} // Adjust path according to the base path
+            src="/profile.png"
             alt="Profile Photo of Sankeerth Bussa"
             className="profile-photo"
             width={120} // Specify width of the image
