@@ -1,105 +1,48 @@
-"use client"; // This is a client component
-
 import React from "react";
 import Image from "next/image";
-import "../styles/styles.css"; // Ensure you have the right path to your CSS file
+import styles from "../styles/Skills.module.css";
 
-export default function Skills() {
+const skillsData = [
+  { name: "AWS", icon: "/icons/aws.svg" },
+  { name: "Kubernetes", icon: "/icons/kubernetes.svg" },
+  { name: "Terraform", icon: "/icons/terraform.svg" },
+  { name: "Python", icon: "/icons/python.svg" },
+  { name: "Docker", icon: "/icons/docker.svg" },
+  { name: "Linux", icon: "/icons/redhat.svg" },
+  { name: "Ansible", icon: "/icons/ansible.svg" },
+  { name: "Bitbucket", icon: "/icons/bitbucket.svg" },
+  { name: "OpenShift", icon: "/icons/openshift.svg" },
+  { name: "Podman", icon: "/icons/podman.svg" },
+  { name: "Confluence", icon: "/icons/confluence.svg" },
+  { name: "Jira", icon: "/icons/jira.svg" },
+  { name: "Git", icon: "/icons/git.svg" },
+  { name: "Wiz", icon: "/icons/wiz.svg" },
+  { name: "Splunk", icon: "/icons/splunk.svg" },
+];
+
+const Skills = () => {
   return (
-    <section className="skills-section">
-      <h2 className="skills-title">Technical Skills</h2>
-      <div className="skills-grid">
-        {/* DevOps Skills */}
-        <div className="skill-card">
-          <Image
-            src={`${process.env.NODE_ENV === "production" ? "/resume" : ""}/devops-icon.png`}
-            alt="DevOps Icon"
-            className="skill-icon"
-            width={120}
-            height={120}
-            unoptimized
-          />
-          <span className="skill-badge">DevOps</span>
-          <div className="skill-progress">
-            <div className="skill-progress-bar" style={{ width: "90%" }}></div>
-          </div>
-          <ul className="skill-list">
-            <li>Ansible</li>
-            <li>Docker</li>
-            <li>Kubernetes</li>
-            <li>OpenShift</li>
-            <li>Podman</li>
-          </ul>
-        </div>
-
-        {/* Cloud & Security Skills */}
-        <div className="skill-card">
-          <Image
-            src={`${process.env.NODE_ENV === "production" ? "/resume" : ""}/cloud-icon.png`}
-            alt="Cloud & Security Icon"
-            className="skill-icon"
-            width={120}
-            height={120}
-            unoptimized
-          />
-          <span className="skill-badge">Cloud & Security</span>
-          <div className="skill-progress">
-            <div className="skill-progress-bar" style={{ width: "90%" }}></div>
-          </div>
-          <ul className="skill-list">
-            <li>AWS</li>
-            <li>Terraform</li>
-            <li>Wiz</li>
-            <li>Splunk</li>
-          </ul>
-        </div>
-
-        {/* Tools Skills */}
-        <div className="skill-card">
-          <Image
-            src={`${process.env.NODE_ENV === "production" ? "/resume" : ""}/tools-icon.png`}
-            alt="Tools Icon"
-            className="skill-icon"
-            width={120}
-            height={120}
-            unoptimized
-          />
-          <span className="skill-badge">Tools</span>
-          <div className="skill-progress">
-            <div className="skill-progress-bar" style={{ width: "80%" }}></div>
-          </div>
-          <ul className="skill-list">
-            <li>Confluence</li>
-            <li>Jira</li>
-            <li>Bitbucket</li>
-            <li>Git</li>
-            <li>Linux</li>
-          </ul>
-        </div>
-
-        {/* Programming Languages */}
-        <div className="skill-card">
-          <Image
-            src={`${process.env.NODE_ENV === "production" ? "/resume" : ""}/languages-icon.png`}
-            alt="Languages Icon"
-            className="skill-icon"
-            width={120}
-            height={120}
-            unoptimized
-          />
-          <span className="skill-badge">Languages</span>
-          <div className="skill-progress">
-            <div className="skill-progress-bar" style={{ width: "95%" }}></div>
-          </div>
-          <ul className="skill-list">
-            <li>Python</li>
-            <li>Shell Scripting</li>
-            <li>JavaScript</li>
-            <li>FastAPI</li>
-            <li>MySQL</li>
-          </ul>
+    <section className={styles.skillsSection}>
+      <h2 className={styles.skillsTitle}>Technical Skills</h2>
+      <div className={styles.skillsContainer}>
+        <div className={styles.skillsGrid}>
+          {skillsData.map((skill, index) => (
+            <div key={index} className={styles.skillCard}>
+              <div className={styles.skillIcon}>
+                <Image
+                  src={skill.icon}
+                  alt={skill.name}
+                  width={40}
+                  height={40}
+                />
+              </div>
+              <p className={styles.skillName}>{skill.name}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default Skills;
