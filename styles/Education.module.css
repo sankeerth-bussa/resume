@@ -1,0 +1,62 @@
+/* Education.module.css */
+
+/* Section Container */
+.section {
+    margin-top: 20px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #ffffff; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border: 1px solid #e0e0e0;
+    text-align: left;
+  }
+  
+  /* Title Styling */
+  .sectionTitle {
+    font-size: 24px;
+    color: #005bb5;
+    border-bottom: 2px solid #0070f3;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  /* Education Details Container */
+  .educationDetails {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between icon and text */
+    padding: 10px 0; /* Vertical padding */
+  }
+  
+  /* Icon Styling */
+  .educationIcon {
+    width: 60px; /* Adjusted icon size */
+    height: 60px;
+    border-radius: 50%;
+    background-color: #f0f4ff;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow around icon */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: contain; /* Adjust icon size within the container */
+  }
+  
+  /* Text Styling */
+  .text {
+    color: #333333;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  .text strong {
+    font-weight: bold;
+    color: #005bb5;
+    display: block; /* Adds spacing below the bold text */
+    margin-bottom: 5px;
+  }
+  

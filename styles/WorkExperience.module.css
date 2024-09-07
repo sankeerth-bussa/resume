@@ -22,6 +22,7 @@
   border-bottom: 2px solid #0070f3;
   padding-bottom: 5px;
   margin-bottom: 15px; /* Margin for spacing */
+  text-align: center;
 }
 
 /* Individual Job Entry Styles */

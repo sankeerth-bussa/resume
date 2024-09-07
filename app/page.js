@@ -1,4 +1,4 @@
-// app/page.js
+// paje.js
 
 import Image from "next/image";
 
@@ -9,6 +9,7 @@ export const metadata = {
 
 import React from "react";
 import "../styles/styles.css";
+import Education from "../components/Education";
 import Skills from "../components/Skills";
 import WorkExperience from "../components/WorkExperience";
 import AcademicProjects from "../components/AcademicProjects";
@@ -43,35 +44,14 @@ export default function Home() {
             src="/profile.png"
             alt="Profile Photo of Sankeerth Bussa"
             className="profile-photo"
-            width={120} // Specify width of the image
-            height={120} // Specify height of the image
-            unoptimized // Disable image optimization for static deployment
+            width={120} 
+            height={120} 
+            unoptimized 
           />
         </section>
 
         {/* Education Section */}
-        <section className="section">
-          <h2 className="section-title">Education</h2>
-          <div className="education-details">
-            <Image
-              src="/education-icon.png"
-              alt="Education Icon"
-              className="education-icon"
-              width={120} // Specify width of the image
-              height={120} // Specify height of the image
-              unoptimized // Disable image optimization for static deployment
-            />
-            <p className="text">
-              <strong>
-                Sreenidhi Institute of Science and Technology, Hyderabad,
-                Telangana, India
-              </strong>
-              <br />
-              B. Tech, Electronics & Computer Engineering (GPA: 8.53), Aug 2018
-              - June 2022
-            </p>
-          </div>
-        </section>
+        <Education />
 
         {/* Technical Skills Section */}
         <Skills />
@@ -81,7 +61,7 @@ export default function Home() {
 
         {/* Certifications Section */}
         <Certifications />
-        
+
         {/* Academic Projects and International Publications Section */}
         <AcademicProjects />
 
