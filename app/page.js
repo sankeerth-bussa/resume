@@ -1,5 +1,7 @@
 // app/page.js
 
+import Image from "next/image";
+
 export const metadata = {
   title: "Sankeerth's Resume",
   description: "Professional Resume Of Sankeerth Bussa",
@@ -36,10 +38,15 @@ export default function Home() {
             </div>
           </div>
           {/* Profile Photo */}
-          <img
-            src="/profile.jpeg" // Ensure this path matches your file name and location in the public folder
+
+          <Image
+            src={`${
+              process.env.NODE_ENV === "production" ? "/resume" : ""
+            }/profile.jpeg`}
             alt="Profile Photo of Sankeerth Bussa"
-            className="profile-photo"
+            width={120}
+            height={120}
+            unoptimized
           />
         </section>
 
@@ -73,10 +80,8 @@ export default function Home() {
         {/* Academic Projects and International Publications Section */}
         <AcademicProjects />
 
-
         {/* Certifications Section */}
         <Certifications />
-
       </main>
     </div>
   );
