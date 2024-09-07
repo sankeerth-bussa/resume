@@ -1,0 +1,103 @@
+/* Publications.module.css */
+
+/* Container for the Publications Section */
+.section {
+  margin-top: 20px;
+  padding: 20px;
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+}
+
+/* Title Styling */
+.sectionTitle {
+  font-size: 24px;
+  color: #005bb5;
+  border-bottom: 2px solid #0070f3;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-align: center; /* Centered title */
+}
+
+/* List Styling */
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Spacing between items */
+}
+
+/* List Item Styling */
+.listItem {
+  display: flex;
+  align-items: flex-start;
+  padding: 20px; /* Increased padding for space */
+  background: linear-gradient(
+    135deg,
+    #f0f4ff,
+    #e3f2fd
+  ); /* Gradient background */
+  border-radius: 12px;
+  transition: transform 0.3s ease, background-color 0.3s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  position: relative;
+}
+
+.listItem:hover {
+  transform: translateY(-5px);
+  background: linear-gradient(
+    135deg,
+    #e3f2fd,
+    #d9eaf9
+  ); /* Subtle gradient change on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Slightly larger shadow on hover */
+}
+
+/* Icon Styling */
+.listIcon {
+  margin-right: 15px;
+  width: 30px; /* Larger icon size */
+  height: 30px;
+  border-radius: 50%; /* Circular border for icon */
+  background-color: #ffffff;
+  padding: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+/* Publication Title Styling */
+.publicationTitle {
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 5px;
+  display: inline-block;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+/* Publication Description Styling */
+.publicationDescription {
+  color: #555555;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-top: 5px;
+}
+
+/* Link Styling */
+.listItem a {
+  text-decoration: none;
+  color: #333333;
+  transition: color 0.3s ease;
+}
+
+.listItem a:hover {
+  color: #005bb5;
+}
