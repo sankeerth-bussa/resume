@@ -1,122 +1,80 @@
 "use client"; // Mark this as a client component
 
-import React, { useState } from "react";
-import "../styles/styles.css"; // Import the CSS file
+import React from "react";
+import styles from "../styles/WorkExperience.module.css"; // Import the new CSS module
 
 export default function WorkExperience() {
-  const [isOpen, setIsOpen] = useState(true);
-
-  const toggleAccordion = () => {
-    setIsOpen(!isOpen);
-  };
-
   return (
-    <section className="section">
-      <h2 className="section-title" onClick={toggleAccordion}>
-        Relevant Work Experience
-        <span className={`accordion-icon ${isOpen ? "open" : ""}`}>▼</span>
-      </h2>
+    <section className={styles["job-section"]}>
+      <h2 className={styles["job-title"]}>Work Experience</h2>
 
-      {isOpen && (
-        <div className="accordion-content">
-          {/* Job 1: Engineer II, Cloud Solutions */}
-          <div className="job">
-            <p className="job-title">
-              Engineer II, Cloud Solutions (AWS), Invesco, Hyderabad, India
-            </p>
-            <p className="job-duration">Jul 2022 – Present</p>
-            <ul className="list">
-              <li className="list-item">
-                <span className="list-icon">🚀</span> Designed reusable
-                Terraform modules adhering to organization standards; automated
-                deployments via Bitbucket Pipelines, saving nearly{" "}
-                <strong>60%</strong> in provisioning time and achieving{" "}
-                <strong>100% compliance</strong> with tags and naming standards.
-              </li>
-              <li className="list-item">
-                <span className="list-icon">🔧</span> Acted as Cloud
-                Administrator with strong Linux System Administration skills,
-                leading to swift issue resolution.
-              </li>
-              <li className="list-item">
-                <span className="list-icon">⏱️</span> Streamlined EC2 instances
-                patching for Windows/RHEL, reducing time by <strong>85%</strong>{" "}
-                and failures by <strong>40%</strong> for AWS multi-account
-                environments.
-              </li>
-              <li className="list-item">
-                <span className="list-icon">🛠️</span> Created Ansible playbooks
-                for pre/post patching validation, with results ingested into
-                Splunk for monitoring.
-              </li>
-              <li className="list-item">
-                <span className="list-icon">🌐</span> Focused on provisioning
-                AWS Infrastructure as Code (IaC) through Terraform CI/CD
-                pipelines in a cloud-based environment.
-              </li>
-              <li className="list-item">
-                <span className="list-icon">🔍</span> Supported the
-                infrastructure for 1200+ microservices and serverless
-                applications on AWS, designed to maintain fault tolerance across
-                regions while providing essential financial services to a
-                diverse user base.
-              </li>
-              <li className="list-item">
-                <span className="list-icon">📦</span> Provisioned and maintained
-                over 50 EKS clusters running isolated namespaces for
-                applications using Terraform.
-              </li>
-              <li className="list-item">
-                <span className="list-icon">⚙️</span> Leveraged Python
-                automation for operational streamlining, resulting in nearly{" "}
-                <strong>100% time savings</strong> on manual processes.
-              </li>
-              <li className="list-item">
-                <span className="list-icon">🤝</span> Collaborated with
-                infrastructure teams on Network, Linux, Windows, Threat
-                management, and Cyber Security.
-              </li>
-              <li className="list-item">
-                <span className="list-icon">🔒</span> Utilized the Wiz security
-                tool to analyze and mitigate risks in the Cloud environment.
-              </li>
-              <li className="list-item">
-                <span className="list-icon">⌛</span> Developed automation to
-                log in to AWS accounts, saving 1 hour of engineer time every
-                day.
-              </li>
-              <li className="list-item">
-                <span className="list-icon">📊</span> Automated the creation of
-                Change Requests using the ServiceNow REST API with Python.
-              </li>
-              <li className="list-item">
-                <span className="list-icon">💻</span> Served as Backend
-                Developer in a Python project building a full-stack application
-                on the ServiceNow CMDB; developed an intuitive web UI atop the
-                configuration management database to enhance user experience.
-              </li>
-              <li className="list-item">
-                <span className="list-icon">🔍</span> Created a Streamlit web UI
-                in Python to simplify SailPoint IAM certification report
-                generation, reducing time and complexity.
-              </li>
-              <li className="list-item">
-                <span className="list-icon">📈</span> Wrote Ansible automation
-                to collect custom logs and facts for monitoring Teams Rooms
-                devices, enabling oversight in Splunk.
-              </li>
-              <li className="list-item">
-                <span className="list-icon">🏆</span> Won a cloud hackathon by
-                building a Python CLI toolkit wrapper that streamlined and
-                improved AWS operations.
-              </li>
-            </ul>
-          </div>
-
-          {/* Additional Job Entries */}
-          {/* Add more job entries in the same format if needed */}
+      <div className={styles["job-container"]}>
+        {/* Job 1: Engineer II, Cloud Solutions */}
+        <div className={styles.job}>
+          <p className={styles.jobTitle}>
+            Engineer II, Cloud Solutions (AWS), Invesco, Hyderabad, India
+          </p>
+          <p className={styles.jobDuration}>Jul 2022 – Present</p>
+          <ul className={styles.list}>
+            <li className={styles.listItem}>
+              <span className={styles.listIcon}>🚀</span> Designed and automated
+              AWS infrastructure using reusable Terraform modules and Bitbucket
+              Pipelines, achieving nearly <strong>60%</strong> reduction in
+              provisioning time and <strong>100% compliance</strong> with
+              organizational standards.
+            </li>
+            <li className={styles.listItem}>
+              <span className="listIcon">🔧</span> Acted as Cloud Administrator
+              with expertise in Linux System Administration and EC2 patching for
+              Windows/RHEL, reducing patching time by <strong>85%</strong> and
+              failures by <strong>40%</strong>.
+            </li>
+            <li className={styles.listItem}>
+              <span className="listIcon">🛠️</span> Created and maintained
+              Ansible playbooks for patching validation and monitoring,
+              integrating results into Splunk for oversight and proactive
+              management.
+            </li>
+            <li className={styles.listItem}>
+              <span className="listIcon">🌐</span> Provisioned and managed AWS
+              infrastructure as code (IaC) using Terraform, supporting 1200+
+              microservices and serverless applications, and maintaining over 50
+              EKS clusters with isolated namespaces.
+            </li>
+            <li className={styles.listItem}>
+              <span className="listIcon">⚙️</span> Developed Python automation
+              scripts and tools, saving <strong>100% of time</strong> on manual
+              processes, including AWS account login automation and ServiceNow
+              API integrations.
+            </li>
+            <li className={styles.listItem}>
+              <span className="listIcon">🤝</span> Collaborated with teams
+              across Networking, Cyber Security, and Systems Administration
+              (Linux/Windows) to optimize cloud infrastructure and ensure
+              security compliance.
+            </li>
+            <li className={styles.listItem}>
+              <span className="listIcon">🔒</span> Utilized Wiz security tools
+              for cloud risk analysis and mitigation.
+            </li>
+            <li className={styles.listItem}>
+              <span className="listIcon">💻</span> Developed backend solutions
+              in Python, including full-stack applications for the ServiceNow
+              CMDB and a Streamlit web UI for SailPoint IAM certification,
+              enhancing user experience and operational efficiency.
+            </li>
+            <li className={styles.listItem}>
+              <span className="listIcon">📈</span> Wrote Ansible automation for
+              custom log and fact collection to monitor Teams Rooms devices,
+              enabling comprehensive oversight in Splunk.
+            </li>
+            <li className={styles.listItem}>
+              <span className="listIcon">🏆</span> Won a cloud hackathon by
+              building a Python CLI toolkit to streamline AWS operations.
+            </li>
+          </ul>
         </div>
-      )}
+      </div>
     </section>
   );
 }
